@@ -1,0 +1,33 @@
+GDRE Tools v2.7.0-beta.2
+Windows 10.0.28000, ANGLE (AMD, AMD Radeon HD 6500 Series (0x00006742) Direct3D11 vs_5_0 ps_5_0, D3D11-8.17.10.1404), opengl3_angle
+Opening file: C:/Users/FurrtMYZY/Downloads/狐处有微光demo/狐处有微光.exe
+Loaded 92 imported files
+Detected Engine Version: 4.5.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 188 files, no errors detected!
+Extracted 188 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     13
+Scripts not decompiled:                 0
+Imported resources for export session:  92
+Successfully converted:                 92
+Lossy:                                  1
+Rewrote metadata:                       74
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.5.1 to edit the project.
+
+*******************************************************************************
+
