@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://l3xnuifm6466"]
+
+[ext_resource type="Script" uid="uid://bh2u18txjv0nq" path="res://berry_drop.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://kq2qyxt453ew" path="res://spr/杂物/浆果.png" id="2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_berry"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pickup"]
+radius = 42.0
+
+[node name="BerryDrop" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+collision_layer = 0
+script = ExtResource("1")
+berry_texture = ExtResource("2")
+
+[node name="DropShape" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_berry")
+
+[node name="PickupArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="PickupShape" type="CollisionShape2D" parent="PickupArea"]
+shape = SubResource("CircleShape2D_pickup")
