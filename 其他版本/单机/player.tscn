@@ -1,0 +1,175 @@
+[gd_scene load_steps=20 format=3 uid="uid://cq2x7np4k8v3w"]
+
+[ext_resource type="Script" uid="uid://babfa8ti0s2wk" path="res://character_body_2d.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cenk1p74as8jr" path="res://ghost.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://d2elx0vdblb7a" path="res://sound/Sound2.mp3" id="3"]
+[ext_resource type="AudioStream" uid="uid://byd5eqwh7ouri" path="res://sound/Sound3.mp3" id="4"]
+[ext_resource type="Texture2D" uid="uid://dwm71joh71vqc" path="res://spr/流明/1788535331852.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dkxfv8ibe388x" path="res://spr/流明/1788535479511.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://iyptwtvbbt50" path="res://spr/流明/1788535436784.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://15icncmnn3uo" path="res://spr/流明/1788535466423.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cjv7ucbom25lt" path="res://spr/流明/1788535489584.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cia85hxvvwq87" path="res://spr/流明/1788535186951.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bpll0v35gkfa" path="res://spr/狐狸（旧）/左高兴.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bpecnrp87w3tg" path="res://spr/狐狸（旧）/左眯眼.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://jidntnsgku5e" path="res://spr/狐狸（旧）/左痛苦.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dquthf83gqhc7" path="res://spr/狐狸（旧）/右高兴.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://ddmi3djj648rm" path="res://spr/狐狸（旧）/右眯眼.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://det6bgdlq2bck" path="res://spr/狐狸（旧）/右痛苦.png" id="16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0muo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2uar"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1c27"]
+font_size = 32
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("sprite1", "sprite2", "sprite3", "sprite4", "sprite5", "sprite6", "eye_left_happy", "eye_left_squint", "eye_left_pain", "eye_right_happy", "eye_right_squint", "eye_right_pain", "head_sprite", "tail_sprite") groups=["player"]]
+position = Vector2(-11602, 34497)
+scale = Vector2(0.7, 0.7)
+collision_layer = 3
+script = ExtResource("1")
+dash_speed = 7500.0
+ghost_scene = ExtResource("2")
+health_regen_at_full_vitality = 1.0
+dash_sound = ExtResource("3")
+light_reflect_dash_sound = ExtResource("4")
+dash_sound_volume = 17.0
+animation_switch_interval = 0.05
+sprite1 = NodePath("Sprite2D")
+sprite2 = NodePath("Sprite2D2")
+sprite3 = NodePath("Sprite2D3")
+sprite4 = NodePath("Sprite2D4")
+sprite5 = NodePath("Sprite2D5")
+sprite6 = NodePath("Sprite2D6")
+eye_left_happy = NodePath("LeftHappy")
+eye_left_squint = NodePath("leftSquint")
+eye_left_pain = NodePath("leftPain")
+eye_right_happy = NodePath("Sprite2D10")
+eye_right_squint = NodePath("Sprite2D7")
+eye_right_pain = NodePath("Sprite2D8")
+head_sprite = NodePath("Sprite2D11")
+tail_sprite = NodePath("Sprite2D9")
+eye_mirror_offset_x = 60.0
+tail_mirror_offset_x = 280.0
+head_offset_range = Vector2(0, 20)
+head_rotation_range = 7.0
+coyote_time = 0.14
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-155, 124.277)
+rotation = 0.25830874
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+offset = Vector2(291.42725, -401.42188)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 65)
+scale = Vector2(18, 35)
+shape = SubResource("RectangleShape2D_o0muo")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(11.5, 11.5)
+shape = SubResource("CapsuleShape2D_p2uar")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(-12, -5)
+scale = Vector2(0.4999999, 0.4999999)
+texture = ExtResource("10")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="LeftHappy" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11")
+offset = Vector2(-63.331055, -157.38672)
+
+[node name="leftSquint" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="leftPain" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="eyes" type="Node2D" parent="."]
+position = Vector2(-71.42927, -151.42299)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0
+pitch_scale = 0.8
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = -822.8572
+offset_top = -758.5714
+offset_right = -422.85718
+offset_bottom = -698.5714
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.85)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+label_settings = SubResource("LabelSettings_u1c27")
+horizontal_alignment = 1

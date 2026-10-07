@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://l3xnslje6465"]
+
+[ext_resource type="Script" uid="uid://dgnic6uhnvksx" path="res://berry_bush.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://6yke12w3kw0q" path="res://spr/杂物/浆果丛.png" id="2"]
+
+[node name="BerryBush" type="Node2D"]
+script = ExtResource("1")
+bush_texture = ExtResource("2")
