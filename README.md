@@ -1,5 +1,5 @@
-# HuChuYouWeiGuangDEMO
-
+# HuChuYouWeiGuangDEMO<br>
+<p style="color:#fb3300;">这个仓库很久才会更新</p><br><br>
 ## 仓库的内容直述
 > <p align="center"><img src="./Res/neo1.png"alt="i-have-adhd"width="50%"/></p>
 > 该仓库仅用于用于存储由 ”漂流“ 制作的 ”狐处有微光“ 游戏源代码
