@@ -1,5 +1,5 @@
 # HuChuYouWeiGuangDEMO<br>
-<p style="color:#fb3300;">这个仓库很久才会更新</p><br><br>
+<p style="color:#fb3300;">这个仓库很久才会更新</p><br>
 
 <p>
 创作者首页：[漂流](https://space.bilibili.com/563225590)<br>
