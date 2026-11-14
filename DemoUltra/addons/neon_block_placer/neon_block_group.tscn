@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/neon_block_placer/neon_block.tscn" id="1"]
+
+[node name="NeonBlocks" type="Node2D"]
+
+[node name="Neon_Dash" parent="." instance=ExtResource("1")]
+position = Vector2(-1500, 250)
+
+[node name="Neon_Jump" parent="." instance=ExtResource("1")]
+position = Vector2(-900, 250)
+mode = 1
+
+[node name="Neon_Interact" parent="." instance=ExtResource("1")]
+position = Vector2(-300, 250)
+mode = 4
+start_solid = false
+
+[node name="Neon_Left" parent="." instance=ExtResource("1")]
+position = Vector2(300, 250)
+mode = 2
+start_solid = false
+
+[node name="Neon_Right" parent="." instance=ExtResource("1")]
+position = Vector2(900, 250)
+mode = 3
+start_solid = false
+
+[node name="Neon_Interact_Rev" parent="." instance=ExtResource("1")]
+position = Vector2(1500, 250)
+mode = 4
+hold_solid = false
+reverse_style = true
+
+[node name="Neon_Left_Rev" parent="." instance=ExtResource("1")]
+position = Vector2(200, -250)
+mode = 2
+hold_solid = false
+reverse_style = true
+
+[node name="Neon_Right_Rev" parent="." instance=ExtResource("1")]
+position = Vector2(600, -250)
+mode = 3
+hold_solid = false
+reverse_style = true

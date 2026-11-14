@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://dkk21jgc5cp58" path="res://bounce_groups/bounce_group.gd" id="1"]
+[ext_resource type="PackedScene" path="res://bounce_groups/bounce_pad.tscn" id="2"]
+
+[node name="RingGroup" type="Node2D"]
+script = ExtResource("1")
+radius = 560.0
+formation_offset = -1000.0
+fx_color = Color(0.3, 0.95, 1, 1)
+
+[node name="Pad1" parent="." instance=ExtResource("2")]
+position = Vector2(560, 0)
+
+[node name="Pad2" parent="." instance=ExtResource("2")]
+position = Vector2(0, 560)
+
+[node name="Pad3" parent="." instance=ExtResource("2")]
+position = Vector2(-560, 0)
+
+[node name="Pad4" parent="." instance=ExtResource("2")]
+position = Vector2(0, -560)
