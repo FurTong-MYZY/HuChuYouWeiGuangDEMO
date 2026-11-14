@@ -1,0 +1,169 @@
+{
+  "nodes": {
+	"mingcang_1": {
+	  "speaker": "溟沧",
+	  "text": "流明，你来啦，好久不见！",
+	  "next": "mingcang_2"
+	},
+	"mingcang_2": {
+	  "speaker": "溟沧",
+	  "text": "路上的纸条，大部分都是我留的哦。",
+	  "choices": [
+		{
+		  "text": "就知道是你！",
+		  "next": "mingcang_surprised"
+		},
+		{
+		  "text": "帮我开锁的也是你吗？",
+		  "next": "mingcang_rescue"
+		}
+	  ]
+	},
+	"mingcang_surprised": {
+	  "speaker": "溟沧",
+	  "text": "嘿嘿，对呀！不过啊，只有聪明的小动物才能看到纸条上那些特殊信息~",
+	  "next": "mingcang_note"
+	},
+	"mingcang_note": {
+	  "speaker": "溟沧",
+	  "text": "解密出来的是我们代代相传的古兽语啦。本来你应该看不懂的。",
+	  "next": "mingcang_power"
+	},
+	"mingcang_power": {
+	  "speaker": "溟沧",
+	  "text": "至于为什么你能直接看懂——嘿嘿，那就是神奇力量喽！",
+	  "choices": [
+		{
+		  "text": "是你救我出来的？",
+		  "next": "mingcang_rescue"
+		},
+		{
+		  "text": "呜呜呜想死你了",
+		  "next": "mingcang_ancient"
+		}
+	  ]
+	},
+	"mingcang_rescue": {
+	  "speaker": "溟沧",
+	  "text": "对呀！等到了一个好机会，我便撬开了你的笼子，又打通了路。",
+	  "next": "mingcang_rescue2"
+	},
+	"mingcang_rescue2": {
+	  "speaker": "溟沧",
+	  "text": "你样子变了好多……不过没事，你会找到归宿的，对吧？",
+	  "next": "mingcang_end"
+	},
+	"mingcang_ancient": {
+	  "speaker": "溟沧",
+	  "text": "我也很想你呢。",
+	  "next": "mingcang_ancient2"
+	},
+	"mingcang_ancient2": {
+	  "speaker": "溟沧",
+	  "text": "总之，继续前进吧，你会回家的！",
+	  "next": "mingcang_end"
+	},
+	"mingcang_end": {
+	  "speaker": "溟沧",
+	  "text": "走吧走吧！前面我帮你探过路啦~",
+	  "next": null
+	},
+	"mangshuo_1": {
+	  "speaker": "芒朔",
+	  "text": "呀，流明，你也到这里了，我也是一同被救出来的。",
+	  "next": "mangshuo_2"
+	},
+	"mangshuo_2": {
+	  "speaker": "芒朔",
+	  "text": "",
+	  "choices": [
+		{
+		  "text": "我一直能闻到你远行的气味。",
+		  "next": "mangshuo_far"
+		},
+		{
+		  "text": "接下来有什么？",
+		  "next": "mangshuo_together"
+		}
+	  ]
+	},
+	"mangshuo_far": {
+	  "speaker": "芒朔",
+	  "text": "对的对的~我就比你早了几步。",
+	  "next": "mangshuo_together"
+	},
+	"mangshuo_together": {
+	  "speaker": "芒朔",
+	  "text": "其实我们目前不能给你太多信息，因为才demo plus版......",
+	  "next": "mangshuo_end"
+	},
+	"mangshuo_end": {
+	  "speaker": "芒朔",
+	  "text": "总之，敬请期待哦，你可以按esc返回标题界面，继续探索！",
+	  "next": null
+	},
+	"qingshi_1": {
+	  "speaker": "青金石",
+	  "text": "你好呀。",
+	  "next": "qingshi_2"
+	},
+	"qingshi_2": {
+	  "speaker": "青金石",
+	  "text": "这里是chapter3，仍在施工中，但demo plus的内容不止这些。",
+	  "choices": [
+		{
+		  "text": "为什么这么说？",
+		  "next": "qingshi_where"
+		},
+		{
+		  "text": "你是谁？",
+		  "next": "qingshi_seek"
+		},
+		{
+		  "text": "阿巴阿巴",
+		  "next": "qingshi_light"
+		}
+	  ]
+	},
+	"qingshi_where": {
+	  "speaker": "青金石",
+	  "text": "是因为除主线外还有2个sp章节。你都发现并打通了吗？",
+	  "next": "qingshi_end"
+	},
+	"qingshi_where2": {
+	  "speaker": "青金石",
+	  "text": "总共有22个可收集的微光，也可以收集下。",
+	  "next": "qingshi_where3"
+	},
+	"qingshi_where3": {
+	  "speaker": "青金石",
+	  "text": "",
+	  "next": "qingshi_where4"
+	},
+	"qingshi_where4": {
+	  "speaker": "青金石",
+	  "text": "",
+	  "next": "qingshi_end"
+	},
+	"qingshi_seek": {
+	  "speaker": "青金石",
+	  "text": "嗯？这对话框不是显示我名字了吗？",
+	  "next": "qingshi_light"
+	},
+	"qingshi_light": {
+	  "speaker": "青金石",
+	  "text": "咳咳，demo plus的内容不止如此...",
+	  "next": "qingshi_where"
+	},
+	"qingshi_light2": {
+	  "speaker": "青金石",
+	  "text": "",
+	  "next": "qingshi_end"
+	},
+	"qingshi_end": {
+	  "speaker": "青金石",
+	  "text": "总共有22个可收集的微光，也可以收集下,它们散落在5个章节各处。",
+	  "next": null
+	}
+  }
+}
