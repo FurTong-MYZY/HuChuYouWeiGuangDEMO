@@ -1,0 +1,36 @@
+GDRE Tools v2.7.4
+Windows 10.0.28000, ANGLE (NVIDIA, NVIDIA GeForce GT 730 (0x00001287) Direct3D11 vs_5_0 ps_5_0, D3D11-10.18.13.6839), opengl3_angle
+Opening file: C:/Users/FurryMYZY/Desktop/其他文件/代码/狐处有微光源代码/Ultra版/狐处有微光Ultra.exe
+Loaded 209 imported files
+Detected Engine Version: 4.5.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 428 files, no errors detected!
+setting "Download plugins" set to true
+setting "Download plugins" set to false
+Extracted 428 files, no errors detected!
+Recreating plugin configs...
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     58
+Scripts not decompiled:                 0
+Imported resources for export session:  209
+Successfully converted:                 209
+Lossy:                                  3
+Rewrote metadata:                       133
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.5.1 to edit the project.
+
+*******************************************************************************
+

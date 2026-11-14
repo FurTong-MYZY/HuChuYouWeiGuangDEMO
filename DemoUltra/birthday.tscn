@@ -1,0 +1,254 @@
+[gd_scene load_steps=25 format=3 uid="uid://dgft5vy10mvjl"]
+
+[ext_resource type="Script" uid="uid://b8i7058jcla73" path="res://birthday.gd" id="1"]
+[ext_resource type="Script" uid="uid://c6myic0jj8l1g" path="res://birthday_background.gd" id="2"]
+[ext_resource type="Script" uid="uid://bsmauhwk531wr" path="res://birthday_platform.gd" id="3"]
+[ext_resource type="Script" uid="uid://bu0bbm4bp8r5v" path="res://birthday_candle.gd" id="4"]
+[ext_resource type="Script" uid="uid://17ipg7hf8red" path="res://birthday_cake.gd" id="5"]
+[ext_resource type="Script" uid="uid://babfa8ti0s2wk" path="res://character_body_2d.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://cenk1p74as8jr" path="res://ghost.tscn" id="7"]
+[ext_resource type="AudioStream" uid="uid://d2elx0vdblb7a" path="res://sound/Sound2.mp3" id="8"]
+[ext_resource type="AudioStream" uid="uid://byd5eqwh7ouri" path="res://sound/Sound3.mp3" id="9"]
+[ext_resource type="Texture2D" uid="uid://cqtvkmiocur0p" path="res://spr/流明/1788535331852.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bnmvpkbrv57qp" path="res://spr/流明/1788535479511.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://blv3eu611kmhq" path="res://spr/流明/1788535436784.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://b2w07hilkbwc0" path="res://spr/流明/1788535466423.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bnmys3ift1dq6" path="res://spr/流明/1788535489584.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dmmgm5pr44yd2" path="res://spr/流明/1788535186951.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://dt074sy51fvgg" path="res://spr/狐狸（旧）/左高兴.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cm7er8gakggbq" path="res://spr/狐狸（旧）/左眯眼.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://1h4xwseg471g" path="res://spr/狐狸（旧）/左痛苦.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://bh75cx8hkdyp8" path="res://spr/狐狸（旧）/右高兴.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://1i3uu5uvt1bw" path="res://spr/狐狸（旧）/右眯眼.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://c72n7yiuc1ck0" path="res://spr/狐狸（旧）/右痛苦.png" id="21"]
+[ext_resource type="Script" uid="uid://bjnak8brf5jth" path="res://birthday_outfit_screen.gd" id="22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxh3k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s653s"]
+
+[node name="Birthday" type="Node2D"]
+script = ExtResource("1")
+
+[node name="WorldRoot" type="Node2D" parent="."]
+scale = Vector2(4.73, 4.73)
+
+[node name="Background" type="Node2D" parent="WorldRoot"]
+script = ExtResource("2")
+
+[node name="Platforms" type="Node2D" parent="WorldRoot"]
+
+[node name="Floor" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(576, 622)
+script = ExtResource("3")
+platform_size = Vector2(1152, 52)
+
+[node name="Platform1" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(335, 488)
+script = ExtResource("3")
+
+[node name="Platform2" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(565, 398)
+script = ExtResource("3")
+
+[node name="Platform3" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(271.6702, 273.57294)
+script = ExtResource("3")
+
+[node name="Platform4" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(1037.8435, 263.00214)
+script = ExtResource("3")
+platform_size = Vector2(170, 16)
+
+[node name="Platform5" type="StaticBody2D" parent="WorldRoot/Platforms"]
+z_index = -5
+position = Vector2(875, 388)
+script = ExtResource("3")
+platform_size = Vector2(170, 16)
+
+[node name="Candles" type="Node2D" parent="WorldRoot"]
+
+[node name="Candle0" type="Node2D" parent="WorldRoot/Candles"]
+position = Vector2(300, 480)
+script = ExtResource("4")
+memory = "收容所里，你睁开眼，看见的是牢笼外的月光。那时你还不知道，世界会用这么大的声音迎接你。"
+
+[node name="Candle1" type="Node2D" parent="WorldRoot/Candles"]
+position = Vector2(540, 390)
+script = ExtResource("4")
+memory = "城区高处，你第一次看见雨幕里的整座城市，也第一次发现，原来自己可以跑得那么远。"
+index = 1
+
+[node name="Candle2" type="Node2D" parent="WorldRoot/Candles"]
+position = Vector2(219.0275, 263.0021)
+script = ExtResource("4")
+memory = "霓虹雨夜之中，你没有回头。那些破碎的灯牌和积水里的倒影，都记得你走过的方向。"
+index = 2
+
+[node name="Candle3" type="Node2D" parent="WorldRoot/Candles"]
+position = Vector2(823.89, 378.01266)
+script = ExtResource("4")
+memory = "警报声里，你没有停下。你开始明白，害怕并不是终点，向前一步才是。"
+index = 3
+
+[node name="Candle4" type="Node2D" parent="WorldRoot/Candles"]
+position = Vector2(995.56024, 253.27695)
+script = ExtResource("4")
+memory = "谢谢你，感谢陪伴。愿这一年的所有疲惫，都在今晚的烛光里被轻轻接住。"
+index = 4
+
+[node name="Cake" type="Node2D" parent="WorldRoot"]
+position = Vector2(1025, 596)
+script = ExtResource("5")
+
+[node name="player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("sprite1", "sprite2", "sprite3", "sprite4", "sprite5", "sprite6", "eye_left_happy", "eye_left_squint", "eye_left_pain", "eye_right_happy", "eye_right_squint", "eye_right_pain", "head_sprite", "tail_sprite") groups=["player"]]
+z_index = 1
+scale = Vector2(0.7, 0.7)
+collision_layer = 3
+script = ExtResource("6")
+dash_speed = 7500.0
+ghost_scene = ExtResource("7")
+health_regen_at_full_vitality = 1.0
+dash_sound = ExtResource("8")
+light_reflect_dash_sound = ExtResource("9")
+dash_sound_volume = 17.0
+animation_switch_interval = 0.05
+sprite1 = NodePath("Sprite2D")
+sprite2 = NodePath("Sprite2D2")
+sprite3 = NodePath("Sprite2D3")
+sprite4 = NodePath("Sprite2D4")
+sprite5 = NodePath("Sprite2D5")
+sprite6 = NodePath("Sprite2D6")
+eye_left_happy = NodePath("LeftHappy")
+eye_left_squint = NodePath("leftSquint")
+eye_left_pain = NodePath("leftPain")
+eye_right_happy = NodePath("Sprite2D10")
+eye_right_squint = NodePath("Sprite2D7")
+eye_right_pain = NodePath("Sprite2D8")
+head_sprite = NodePath("Sprite2D11")
+tail_sprite = NodePath("Sprite2D9")
+dash_anim_scale = 8.0
+eye_mirror_offset_x = 60.0
+tail_mirror_offset_x = 280.0
+head_offset_range = Vector2(0, 20)
+head_rotation_range = 7.0
+coyote_time = 0.14
+
+[node name="Sprite2D9" type="Sprite2D" parent="player"]
+position = Vector2(-155, 124.277)
+rotation = 0.25830874
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10")
+offset = Vector2(291.42725, -401.42188)
+
+[node name="Sprite2D2" type="Sprite2D" parent="player"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+texture = ExtResource("12")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(0, 65)
+scale = Vector2(18, 35)
+shape = SubResource("RectangleShape2D_qxh3k")
+
+[node name="Area2D" type="Area2D" parent="player"]
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D"]
+scale = Vector2(11.5, 11.5)
+shape = SubResource("CapsuleShape2D_s653s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="player"]
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("13")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D4" type="Sprite2D" parent="player"]
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("14")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D5" type="Sprite2D" parent="player"]
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("13")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D6" type="Sprite2D" parent="player"]
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("11")
+offset = Vector2(-71.42822, -152.86719)
+
+[node name="Sprite2D11" type="Sprite2D" parent="player"]
+position = Vector2(-12, -5)
+scale = Vector2(0.4999999, 0.4999999)
+texture = ExtResource("15")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="LeftHappy" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16")
+offset = Vector2(-63.331055, -157.38672)
+
+[node name="leftSquint" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="leftPain" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D10" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D7" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="Sprite2D8" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-40, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("21")
+offset = Vector2(-71.42969, -151.42578)
+
+[node name="eyes" type="Node2D" parent="player"]
+position = Vector2(-71.42927, -151.42299)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="player"]
+volume_db = 10.0
+pitch_scale = 0.8
+
+[node name="BirthdayCamera" type="Camera2D" parent="."]
+position = Vector2(510, 2480)
+zoom = Vector2(0.235, 0.235)
+
+[node name="OutfitLayer" type="CanvasLayer" parent="."]
+layer = 30
+
+[node name="OutfitOverlay" type="Node2D" parent="OutfitLayer"]
+script = ExtResource("22")
