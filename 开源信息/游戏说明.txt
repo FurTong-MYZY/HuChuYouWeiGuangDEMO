@@ -9,3 +9,8 @@
 
 交流QQ群: 1090924856
 ^^^ 游戏有问题往这里面发
+
+重要提醒：
+游戏解包出现意外，导致 DemoUltra 的 birthday_cake.gd 下 draw_ellipse(center: Vector2, radii: Vector2, color: Color) -> void 函数触发崩溃：
+The function signature doesn't match the parent. Parent signature is "draw_ellipse(Vector2, float, float, Color, bool = <default>, float = <default>, bool = <default>) -> void".
+但这只在特定情况下发生，问题尚未解决，使用源代码游玩时请注意（编译后的exe不会导致崩溃）
