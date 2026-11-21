@@ -10,7 +10,37 @@
 交流QQ群: 1090924856
 ^^^ 游戏有问题往这里面发
 
-重要提醒：
+重要提醒（以下内容所提到的方法在下载源代码之后自行操作）：
 游戏解包出现意外，导致 DemoUltra 的 birthday_cake.gd 下 draw_ellipse(center: Vector2, radii: Vector2, color: Color) -> void 函数触发崩溃：
 The function signature doesn't match the parent. Parent signature is "draw_ellipse(Vector2, float, float, Color, bool = <default>, float = <default>, bool = <default>) -> void".
-但这只在特定情况下发生，问题尚未解决，使用源代码游玩时请注意（编译后的exe不会导致崩溃）
+这只在特定情况下发生，但我已找到解决方案（如果你需要用源代码游玩，请按照以下方法修改代码）：
+1. 打开 birthday_cake.gd 并找到 draw_ellipse 函数（line: 54）
+2. 将函数名称从 draw_ellipse 改为 fn_draw_ellipse ：
+====================
+func draw_ellipse(center: Vector2, radii: Vector2, color: Color) -> void :
+	var pts: = PackedVector2Array()
+	for i in range(32):
+		var a: = TAU * float(i) / 32.0
+		pts.append(center + Vector2(cos(a) * radii.x, sin(a) * radii.y))
+	draw_colored_polygon(pts, color)
+====================
+改为
+====================
+func fn_draw_ellipse(center: Vector2, radii: Vector2, color: Color) -> void :
+	var pts: = PackedVector2Array()
+	for i in range(32):
+		var a: = TAU * float(i) / 32.0
+		pts.append(center + Vector2(cos(a) * radii.x, sin(a) * radii.y))
+	draw_colored_polygon(pts, color)
+====================
+3. 找到 line:26 和 line:27 的代码：
+====================
+	draw_ellipse(Vector2(0, 4), Vector2(72, 14), Color(0.55, 0.38, 0.4))
+	draw_ellipse(Vector2(0, 1), Vector2(66, 12), Color(0.8, 0.62, 0.55))
+====================
+改为
+====================
+	fn_draw_ellipse(Vector2(0, 4), Vector2(72, 14), Color(0.55, 0.38, 0.4))
+	fn_draw_ellipse(Vector2(0, 1), Vector2(66, 12), Color(0.8, 0.62, 0.55))
+====================
+4. 重新启动游戏问题就会消失
